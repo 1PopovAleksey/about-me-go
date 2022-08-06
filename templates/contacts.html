@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-mono">
+<header class="bg-black">
+    <div class="flex items-center justify-between p-5">
+        <a class="text-4xl font-bold transition-all hover:text-stone-300 text-white"
+           href="https://github.com/1PopovAleksey" target="_blank">1PopovAleksey</a>
+        <nav class="flex gap-5">
+            <a class="text-2xl font-bold transition-all hover:text-stone-300 text-white" href="/">Main</a>
+            <a class="text-2xl font-bold transition-all hover:text-stone-300 text-white" href="/about/">About Me</a>
+            <a class="text-2xl font-bold transition-all hover:text-stone-300 text-white" href="/contacts/">Contact</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section>
+        <div>
+            <div class="flex flex-col justify-center mx-auto w-96 h-[90vh]">
+                <h1 class="font-bold text-6xl mb-5">Contacts</h1>
+                <p class="mb-2">Telegram: {{ .Telegram }}*</p>
+                <p class="mb-2">Gmail: {{ .Gmail }}</p>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
