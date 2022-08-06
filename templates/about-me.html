@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-mono">
+<header class="bg-black">
+    <div class="flex items-center justify-between p-5">
+        <a class="text-4xl font-bold transition-all hover:text-stone-300 text-white"
+           href="https://github.com/1PopovAleksey" target="_blank">1PopovAleksey</a>
+        <nav class="flex gap-5">
+            <a class="text-2xl font-bold transition-all hover:text-stone-300 text-white" href="/">Main</a>
+            <a class="text-2xl font-bold transition-all hover:text-stone-300 text-white" href="/about/">About Me</a>
+            <a class="text-2xl font-bold transition-all hover:text-stone-300 text-white" href="/contacts/">Contact</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section>
+        <div class="flex flex-col justify-center mx-auto w-96 h-[90vh]">
+            <h1 class="font-bold text-6xl mb-5">About me</h1>
+            <p class="mb-2">
+                My name is: {{ .Name }}
+                {{if eq .LastName "Popov"}}
+                Popov
+                {{ else }}
+                Кто то там
+                {{ end }}
+            </p>
+            <p class="mb-2">I'm: {{ .Age }}</p>
+            <p class="mb-2">My full stack: {{ .Stack }}</p>
+            <p class="mb-2">My experience in years: {{ .Experience }}</p>
+            <p>My hobbies: </p>
+            <ul class="m-0 pl-5 list-disc">
+                {{ range .Hobbies }}
+                <li class="m-1">{{ . }}</li>
+                {{ else }}
+                <li class="m-1">I don't have a hobbies</li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+</main>
+</body>
+</html>
